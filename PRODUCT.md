@@ -14,7 +14,7 @@ Present Fleeky Bar as a distinctive premium nail studio, make treatments and pri
 
 ## Brand Personality
 
-Bold, sensual, fashion-forward. The experience should feel confident, artistic, high-end, and slightly nocturnal without losing clarity or professionalism.
+Bold, rebellious, sensual and fashion-forward. The experience should feel like an independent dark-glam beauty campaign: liquid chrome, Y2K references, oversized editorial typography and purposeful asymmetry. Keep booking, prices and practical information clear and professional. See DESIGN.md for the approved visual and motion system.
 
 ## Anti-references
 
@@ -23,7 +23,7 @@ Avoid generic nail salon styling: white or beige surfaces, cute pastel pink, sof
 ## Design Principles
 
 - Let real nail work prove the studio's craft.
-- Use chrome as a precise accent, not visual noise.
+- Use liquid chrome as a campaign focal point, balanced by quiet service and pricing sections.
 - Keep every booking path obvious and consistent.
 - Balance strong fashion-editorial expression with effortless scanning.
 - Preserve the brand's dark plum identity on every viewport.
