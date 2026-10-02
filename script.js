@@ -15,6 +15,7 @@
     });
     activeAnimations.add(animation);
     animation.finished.catch(() => {}).finally(() => activeAnimations.delete(animation));
+    return animation;
   };
 
   const setMenu = (open) => {
@@ -82,18 +83,23 @@
     });
   });
 
-  // Content remains visible without JavaScript or when animations are cancelled.
-  document.querySelectorAll('.hero h1 span').forEach((line, index) => {
-    const rotation = line.classList.contains('hero-bar') ? ' rotate(-5deg)' : '';
+  // A single poster assembly; the default page remains fully visible.
+  document.querySelectorAll('.hero h1 > span').forEach((line, index) => {
+    const base = getComputedStyle(line).transform;
+    const rotation = base === 'none' ? '' : base;
     animate(line, [
-      { transform: `translateX(-48px) skewX(-8deg)${rotation}`, opacity: 0.25 },
-      { transform: `translateX(0) skewX(0)${rotation}`, opacity: 1 }
-    ], { duration: 800, delay: index * 100 });
+      { clipPath: 'inset(0 100% 0 0)', transform: `translateX(${index ? 70 : -90}px) skewX(-9deg) ${rotation}` },
+      { clipPath: 'inset(0 0 0 0)', transform: rotation || 'none' }
+    ], { duration: 1100, delay: index * 180 });
   });
-  animate(document.querySelector('.hero-frame'), [
-    { clipPath: 'inset(0 0 0 100%)', transform: 'scale(1.05)' },
+  animate(document.querySelector('.hero-photo'), [
+    { clipPath: 'inset(0 0 0 100%)', transform: 'scale(1.12)' },
     { clipPath: 'inset(0 0 0 0)', transform: 'scale(1)' }
-  ], { duration: 900 });
+  ], { duration: 1200, delay: 100 });
+  animate(document.querySelector('.hero-detail img'), [
+    { clipPath: 'inset(100% 0 0 0)', transform: 'scale(1.1)' },
+    { clipPath: 'inset(0 0 0 0)', transform: 'scale(1)' }
+  ], { duration: 950, delay: 300 });
 
   const entranceObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
@@ -104,9 +110,9 @@
           { clipPath: 'inset(0 0 100% 0)', transform: 'scale(1.1)' },
           { clipPath: 'inset(0 0 0 0)', transform: 'scale(1)' }
         ], { duration: 950 });
-      } else if (target.matches('.manifesto h2')) {
-        [...target.children].forEach((word, index) => animate(word, [
-          { transform: `translateX(${index % 2 ? 45 : -45}px)`, opacity: 0.3 },
+      } else if (target.matches('.manifesto h2, .nail-art h2')) {
+        [...target.children].filter((word) => word.tagName !== 'BR').forEach((word, index) => animate(word, [
+          { transform: `translateX(${index % 2 ? 65 : -65}px)`, opacity: 0.3 },
           { transform: 'translateX(0)', opacity: 1 }
         ], { duration: 800, delay: index * 110 }));
       } else {
@@ -132,7 +138,7 @@
       toggle.setAttribute('aria-pressed', String(paused));
     });
     if (motionQuery.matches) activeAnimations.forEach((animation) => animation.cancel());
-    document.querySelectorAll('.look-open').forEach((el) => {
+    document.querySelectorAll('.look-open, .hero-frame').forEach((el) => {
       el.style.removeProperty('--tilt-x');
       el.style.removeProperty('--tilt-y');
     });
@@ -248,7 +254,7 @@
   });
 
   const looks = [...document.querySelectorAll('.look-open')];
-  looks.forEach((link) => {
+  document.querySelectorAll('.look-open, .hero-frame').forEach((link) => {
     let frame;
     link.addEventListener('pointermove', (event) => {
       if (motionQuery.matches || !finePointer.matches || mobileQuery.matches) return;
@@ -256,8 +262,8 @@
       frame = requestAnimationFrame(() => {
         if (motionQuery.matches || !finePointer.matches || mobileQuery.matches) return;
         const rect = link.getBoundingClientRect();
-        link.style.setProperty('--tilt-x', `${((event.clientY - rect.top) / rect.height - 0.5) * -5}deg`);
-        link.style.setProperty('--tilt-y', `${((event.clientX - rect.left) / rect.width - 0.5) * 5}deg`);
+        link.style.setProperty('--tilt-x', `${((event.clientY - rect.top) / rect.height - 0.5) * -7}deg`);
+        link.style.setProperty('--tilt-y', `${((event.clientX - rect.left) / rect.width - 0.5) * 7}deg`);
       });
     });
     const resetTilt = () => {

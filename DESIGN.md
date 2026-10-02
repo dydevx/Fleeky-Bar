@@ -17,8 +17,8 @@ Purposeful overlap is welcome; booking and business information stay clear.
 - Actual studio work provides the evidence. The existing liquid-metal hand is
   decorative, never presented as a client result. No standalone FB monogram
   in page content; the existing Logo.jpeg is retained as the requested favicon.
-- Hero layers large typography behind a tilted real photo, with outline type
-  in front. The gallery is a curated, labeled collection of overlapping prints.
+- Hero layers the large Fleeky wordmark behind tilted real photography, with
+  outlined Bar in front. The gallery is a collection of overlapping prints.
 - Nail art and social photography have explicit heights; intrinsic image sizes
   must never dictate section heights.
 
@@ -40,3 +40,19 @@ Preserve prices, service descriptions, hours, address, phone, both social URLs,
 Salonized booking links and the exact prominent credit “Door HoangCaster”.
 Check narrow mobile, tablet and wide desktop. Do not equate DOM tests with
 visual browser verification.
+
+## Approved rebellious poster refinement
+
+Preserve the original dark-glam, Y2K editorial collage. Amplification happens
+inside that composition and the existing palette, fonts and rectangular forms.
+
+- Keep Fleeky Bar as the hero headline, with a displaced chrome outline behind
+  the rose Fleeky lettering and a larger outlined Bar across the foreground.
+- Tilt the main real nail print more decisively; retain the smaller chrome detail
+  print on desktop and enlarge the liquid-metal sculpture at the left.
+- Keep the italic "Good nails. Bad attitude." print caption and clear booking row.
+- Restore the stepped manifesto and overlapping, independently focused gallery
+  prints. Increase photographic scale and opposing rotations within that language.
+- Keep the rose nail-art campaign panel and clear pricing/business information.
+- Use one finite title/photo assembly, fine-pointer photo tilt and hover sheen.
+  All motion supports reduced motion and the page stays visible without JavaScript.
