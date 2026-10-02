@@ -19,6 +19,10 @@
   --script: "Segoe Print", "Bradley Hand", cursive;
   --sans: "Helvetica Neue", Arial, sans-serif;
   --ease: cubic-bezier(.16, 1, .3, 1);
+  --nail-brightness: 1.07;
+  --nail-contrast: 1.08;
+  --nail-saturation: 1.02;
+  --hero-photo-zoom: 1.12;
 }
 * { box-sizing: border-box; }
 ::selection { color: var(--ink); background: var(--rose); }
@@ -26,6 +30,11 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 body { margin: 0; color: var(--white); background: var(--ink); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
 main { overflow: clip; }
 img { display: block; max-width: 100%; }
+/* A restrained rose cast in the photos, with the original nail colours intact. */
+.photo-tone-defs { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
+.nail-photo { filter: brightness(var(--nail-brightness)) contrast(var(--nail-contrast)) saturate(var(--nail-saturation)) url("#nail-photo-tone"); }
+.nail-photo[src$="nails-shimmer.jpeg"] { --nail-brightness: 1.11; }
+.nail-photo[src$="nails-red.jpeg"], .nail-photo[src$="nails-green-flame.jpeg"] { --nail-saturation: 1; }
 .icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; vertical-align: middle; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
@@ -85,7 +94,7 @@ em { font-family: var(--serif); font-weight: 400; }
 .hero-visual { position: absolute; z-index: 2; width: 38%; height: 510px; left: 34%; top: 274px; transform: rotate(-12deg); }
 .hero-frame { position: relative; width: 100%; height: 100%; overflow: hidden; border: 6px solid var(--rose); background: var(--ink-3); transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); transition: transform .4s var(--ease); }
 .hero-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 25%, #fff9fe66 48%, transparent 68%); transform: translateX(-150%); }
-.hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; transition: transform .9s var(--ease); }
+.hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; transform: scale(var(--hero-photo-zoom)); transform-origin: 50% 60%; transition: transform .9s var(--ease); }
 .hero-detail { position: absolute; z-index: 2; top: 178px; right: 3%; width: 17%; transform: rotate(11deg); }
 .hero-detail img { width: 100%; height: 180px; object-fit: cover; object-position: 50% 40%; border: 4px solid var(--chrome); }
 .hero-detail figcaption { padding-top: 9px; color: var(--chrome); font: italic .85rem/1.5 var(--serif); }

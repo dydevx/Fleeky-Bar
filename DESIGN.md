@@ -61,3 +61,14 @@ inside that composition and the existing palette, fonts and rectangular forms.
 - Keep the rose nail-art campaign panel and clear pricing/business information.
 - Use one finite title/photo assembly, fine-pointer photo tilt and hover sheen.
   All motion supports reduced motion and the page stays visible without JavaScript.
+
+## Nail photography finish
+
+- Present real nail photography with a shared, restrained rose tint, slightly lifted
+  exposure and contrast. Preserve recognisable polish colours and chrome detail.
+- Apply the same finish to service previews and the full-size lookbook. Shimmer
+  photography gets a small additional exposure lift; red and green retain their
+  original saturation.
+- Crop the pink chrome hero closer to the nails, at 50% / 60%, with a 1.12 scale.
+  Its entrance ends at that same scale, including when motion is reduced.
+- Keep the source photographs unchanged; the finish is applied by the website.

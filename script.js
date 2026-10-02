@@ -93,8 +93,8 @@
     ], { duration: 1100, delay: index * 180 });
   });
   animate(document.querySelector('.hero-photo'), [
-    { clipPath: 'inset(0 0 0 100%)', transform: 'scale(1.12)' },
-    { clipPath: 'inset(0 0 0 0)', transform: 'scale(1)' }
+    { clipPath: 'inset(0 0 0 100%)', transform: 'scale(calc(var(--hero-photo-zoom) + .06))' },
+    { clipPath: 'inset(0 0 0 0)', transform: 'scale(var(--hero-photo-zoom))' }
   ], { duration: 1200, delay: 100 });
   animate(document.querySelector('.hero-detail img'), [
     { clipPath: 'inset(100% 0 0 0)', transform: 'scale(1.1)' },
