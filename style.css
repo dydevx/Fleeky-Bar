@@ -19,9 +19,9 @@
   --script: "Segoe Print", "Bradley Hand", cursive;
   --sans: "Helvetica Neue", Arial, sans-serif;
   --ease: cubic-bezier(.16, 1, .3, 1);
-  --nail-brightness: 1.07;
-  --nail-contrast: 1.08;
-  --nail-saturation: 1.02;
+  --nail-brightness: 1.08;
+  --nail-contrast: 1.18;
+  --nail-saturation: 1.25;
   --hero-photo-zoom: 1.12;
 }
 * { box-sizing: border-box; }
@@ -30,11 +30,14 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 body { margin: 0; color: var(--white); background: var(--ink); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
 main { overflow: clip; }
 img { display: block; max-width: 100%; }
-/* A restrained rose cast in the photos, with the original nail colours intact. */
+/* Vivid polish, deep shadows and rose-plum colour, with neutral chrome highlights. */
 .photo-tone-defs { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
 .nail-photo { filter: brightness(var(--nail-brightness)) contrast(var(--nail-contrast)) saturate(var(--nail-saturation)) url("#nail-photo-tone"); }
-.nail-photo[src$="nails-shimmer.jpeg"] { --nail-brightness: 1.11; }
-.nail-photo[src$="nails-red.jpeg"], .nail-photo[src$="nails-green-flame.jpeg"] { --nail-saturation: 1; }
+.nail-photo[src$="nails-chrome-pink.jpeg"] { --nail-saturation: 1.32; }
+.nail-photo[src$="nails-silver.jpeg"], .nail-photo[src$="nails-gold-chrome.jpeg"] { --nail-saturation: 1.16; }
+.nail-photo[src$="nails-shimmer.jpeg"] { --nail-brightness: 1.13; --nail-contrast: 1.14; --nail-saturation: 1.2; }
+.nail-photo[src$="nails-red.jpeg"], .nail-photo[src$="nails-burgundy.jpeg"] { --nail-contrast: 1.14; --nail-saturation: 1.18; }
+.nail-photo[src$="nails-green-flame.jpeg"] { --nail-saturation: 1.22; }
 .icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; vertical-align: middle; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }

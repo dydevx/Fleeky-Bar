@@ -64,11 +64,12 @@ inside that composition and the existing palette, fonts and rectangular forms.
 
 ## Nail photography finish
 
-- Present real nail photography with a shared, restrained rose tint, slightly lifted
-  exposure and contrast. Preserve recognisable polish colours and chrome detail.
-- Apply the same finish to service previews and the full-size lookbook. Shimmer
-  photography gets a small additional exposure lift; red and green retain their
-  original saturation.
+- Present real nail photography with vivid polish, deeper contrast and rose-plum
+  shadows. The shared finish lifts brightness by 8%, contrast by 18% and saturation
+  by 25%. The colour matrix keeps white highlights neutral for chrome detail.
+- Apply the same finish to service previews and the full-size lookbook. Pink chrome
+  gets stronger colour; silver and gold get a gentler saturation lift. Shimmer gets
+  extra exposure, while red and burgundy use gentler contrast and saturation.
 - Crop the pink chrome hero closer to the nails, at 50% / 60%, with a 1.12 scale.
   Its entrance ends at that same scale, including when motion is reduced.
 - Keep the source photographs unchanged; the finish is applied by the website.
