@@ -10,9 +10,14 @@ Purposeful overlap is welcome; booking and business information stay clear.
 
 - Dark ink `#130811`, deep plum `#40152f`, plum highlight `#5f204b`.
 - Rose `#f092dc`, chrome `#dcd3de`, paper white `#fff9fe`.
-- Self-hosted Anton for campaign-scale condensed headlines; native Bodoni/Didot
+- Self-hosted Caprasimo for bold, rounded retro headlines and brand wordmarks,
+  following the user's Creamy Sugar Bold visual reference; native Bodoni/Didot
   serif for italic contrast; Helvetica/Arial for functional copy; a restrained
-  handwritten accent for print captions. Anton's OFL license is bundled.
+  handwritten accent for print captions. Caprasimo's OFL license is bundled.
+  Display sizes are tuned to its wider letterforms. Rose brand lettering has
+  a restrained dimensional highlight; practical copy stays in the sans face.
+- Four-point SVG sparkles separate marquee phrases. Direction arrows are SVGs
+  with currentColor; decorative icons never rely on platform emoji rendering.
 - Rectangular buttons and fine rules. No pill-shaped service cards.
 - Actual studio work provides the evidence. The existing liquid-metal hand is
   decorative, never presented as a client result. No standalone FB monogram
