@@ -23,7 +23,8 @@ Purposeful overlap is welcome; booking and business information stay clear.
   decorative, never presented as a client result. No standalone FB monogram
   in page content; the existing Logo.jpeg is retained as the requested favicon.
 - Hero layers the large Fleeky wordmark behind tilted real photography, with
-  outlined Bar in front. The gallery is a collection of overlapping prints.
+  solid rose Bar in front, matching the photo border. The gallery is a
+  collection of overlapping prints.
 - Nail art and social photography have explicit heights; intrinsic image sizes
   must never dictate section heights.
 
@@ -52,7 +53,7 @@ Preserve the original dark-glam, Y2K editorial collage. Amplification happens
 inside that composition and the existing palette, fonts and rectangular forms.
 
 - Keep Fleeky Bar as the hero headline, with a displaced chrome outline behind
-  the rose Fleeky lettering and a larger outlined Bar across the foreground.
+  the rose Fleeky lettering and a larger solid rose Bar across the foreground.
 - Tilt the main real nail print more decisively; retain the smaller chrome detail
   print on desktop and enlarge the liquid-metal sculpture at the left.
 - Keep the italic "Good nails. Bad attitude." print caption and clear booking row.
@@ -64,12 +65,17 @@ inside that composition and the existing palette, fonts and rectangular forms.
 
 ## Nail photography finish
 
-- Present real nail photography with vivid polish, deeper contrast and rose-plum
-  shadows. The shared finish lifts brightness by 8%, contrast by 18% and saturation
-  by 25%. The colour matrix keeps white highlights neutral for chrome detail.
-- Apply the same finish to service previews and the full-size lookbook. Pink chrome
-  gets stronger colour; silver and gold get a gentler saturation lift. Shimmer gets
-  extra exposure, while red and burgundy use gentler contrast and saturation.
+- Present real nail photography with the source photographs' natural skin tones.
+  Do not apply whole-image brightness, contrast, saturation or colour grading.
+  Preserve original polish and chrome detail across hero, service previews,
+  gallery, social photography and the full-size lookbook. Any future polish
+  enhancement must be isolated to the nails without altering skin.
 - Crop the pink chrome hero closer to the nails, at 50% / 60%, with a 1.12 scale.
   Its entrance ends at that same scale, including when motion is reduced.
-- Keep the source photographs unchanged; the finish is applied by the website.
+- Keep the source photographs unchanged.
+- Fill Bar in rose `#f092dc`, matching the hero photo border, with a fine pale
+  edge and the same front-face highlight and rose shadow as Fleeky. Add a pale
+  pink/chrome duplicate offset down and right with stacked rose/plum shadows
+  and a soft dark cast shadow, matching the reference's dimensional lettering.
+  Scale the offset with the lettering on desktop, tablet and mobile; hide the
+  decorative duplicate in forced-colour mode and from assistive technology.
