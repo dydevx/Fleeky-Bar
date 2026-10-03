@@ -84,8 +84,7 @@ em { font-family: var(--serif); font-weight: 400; }
 .hero h1 { position: absolute; inset: 170px 0 auto; font: clamp(100px, 20vw, 288px)/1 var(--display); letter-spacing: -.025em; text-transform: uppercase; pointer-events: none; }
 .hero-name { position: relative; display: block; width: fit-content; z-index: 1; color: var(--rose); text-shadow: 0 -1px 0 #ffd3ef, 0 3px 0 #c565ae, 0 6px 10px rgb(8 2 7 / 28%); transform: rotate(-2deg); }
 .hero-echo { position: absolute; z-index: -1; top: 13px; left: 16px; color: transparent; -webkit-text-stroke: 1px var(--chrome); }
-.hero-bar { position: absolute; z-index: 4; top: 345px; right: 2%; color: var(--rose); -webkit-text-stroke: .75px #ffd3ef; text-shadow: 0 -1px 0 #ffd3ef, 0 3px 0 #c565ae, 0 6px 10px rgb(8 2 7 / 28%); font-size: .94em; letter-spacing: -.04em; transform: rotate(-7deg); }
-.hero-bar-echo { position: absolute; z-index: -1; top: .055em; left: .055em; color: #eed3e6; -webkit-text-stroke: .75px var(--white); text-shadow: 0 1px 0 #e3b5d5, 0 3px 0 #c565ae, 0 5px 0 #a94b91, 0 9px 12px rgb(8 2 7 / 45%); }
+.hero-bar { position: absolute; z-index: 4; top: 345px; right: 2%; color: transparent; -webkit-text-stroke: 3px var(--rose); text-shadow: none; font-size: .94em; letter-spacing: -.04em; transform: rotate(-7deg); }
 .hero-visual { position: absolute; z-index: 2; width: 38%; height: 510px; left: 34%; top: 274px; transform: rotate(-12deg); }
 .hero-frame { position: relative; width: 100%; height: 100%; overflow: hidden; border: 6px solid var(--rose); background: var(--ink-3); transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); transition: transform .4s var(--ease); }
 .hero-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 25%, #fff9fe66 48%, transparent 68%); transform: translateX(-150%); }
@@ -532,7 +531,7 @@ body.lookbook-open, body.menu-open { overflow: hidden; }
 }
 @media (forced-colors: active) {
   .hero-bar { color: CanvasText; -webkit-text-stroke: 0; text-shadow: none; }
-  .hero-echo, .hero-bar-echo { display: none; }
+  .hero-echo { display: none; }
   .button { border: 1px solid ButtonText; }
   .editorial-cursor { display: none; }
 }

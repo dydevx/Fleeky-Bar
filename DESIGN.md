@@ -23,7 +23,7 @@ Purposeful overlap is welcome; booking and business information stay clear.
   decorative, never presented as a client result. No standalone FB monogram
   in page content; the existing Logo.jpeg is retained as the requested favicon.
 - Hero layers the large Fleeky wordmark behind tilted real photography, with
-  solid rose Bar in front, matching the photo border. The gallery is a
+  transparent Bar with a 3px rose outline in front, matching the photo border. The gallery is a
   collection of overlapping prints.
 - Nail art and social photography have explicit heights; intrinsic image sizes
   must never dictate section heights.
@@ -68,7 +68,7 @@ Preserve the original dark-glam, Y2K editorial collage. Amplification happens
 inside that composition and the existing palette, fonts and rectangular forms.
 
 - Keep Fleeky Bar as the hero headline, with a displaced chrome outline behind
-  the rose Fleeky lettering and a larger solid rose Bar across the foreground.
+  the rose Fleeky lettering and a larger transparent Bar with a rose outline across the foreground.
 - Tilt the main real nail print more decisively; retain the smaller chrome detail
   print on desktop and enlarge the liquid-metal sculpture at the left.
 - Keep the italic "Good nails. Bad attitude." print caption and clear booking row.
@@ -88,9 +88,8 @@ inside that composition and the existing palette, fonts and rectangular forms.
 - Crop the pink chrome hero closer to the nails, at 50% / 60%, with a 1.12 scale.
   Its entrance ends at that same scale, including when motion is reduced.
 - Keep the source photographs unchanged.
-- Fill Bar in rose `#f092dc`, matching the hero photo border, with a fine pale
-  edge and the same front-face highlight and rose shadow as Fleeky. Add a pale
-  pink/chrome duplicate offset down and right with stacked rose/plum shadows
-  and a soft dark cast shadow, matching the reference's dimensional lettering.
-  Scale the offset with the lettering on desktop, tablet and mobile; hide the
-  decorative duplicate in forced-colour mode and from assistive technology.
+- Keep Bar transparent with a 3px rose `#f092dc` outline, matching the hero
+  photo border. Use no filled duplicate or text shadow so the background and
+  photography remain visible through the lettering. Preserve its size,
+  placement and rotation on desktop, tablet and mobile; use solid CanvasText
+  in forced-colour mode for readability.

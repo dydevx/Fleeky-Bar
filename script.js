@@ -103,7 +103,7 @@
 
   // A cut-and-paste poster: separate the print layers, then register them again.
   const heroFrame = document.querySelector('.hero-frame');
-  const echoes = [...document.querySelectorAll('.hero-echo, .hero-bar-echo')];
+  const echoes = [...document.querySelectorAll('.hero-echo')];
   const glints = [...document.querySelectorAll('.hero-glint')];
   let lastPosterKick = -Infinity;
   const kickPoster = (delay = 0) => {
