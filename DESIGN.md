@@ -23,8 +23,8 @@ Purposeful overlap is welcome; booking and business information stay clear.
   decorative, never presented as a client result. No standalone FB monogram
   in page content; the existing Logo.jpeg is retained as the requested favicon.
 - Hero layers the large Fleeky wordmark behind tilted real photography, with
-  transparent Bar with a 3px rose outline in front, matching the photo border. The gallery is a
-  collection of overlapping prints.
+  transparent Bar and a fine responsive rose outline in front. The gallery is
+  a collection of overlapping prints.
 - Nail art and social photography have explicit heights; intrinsic image sizes
   must never dictate section heights.
 
@@ -88,8 +88,8 @@ inside that composition and the existing palette, fonts and rectangular forms.
 - Crop the pink chrome hero closer to the nails, at 50% / 60%, with a 1.12 scale.
   Its entrance ends at that same scale, including when motion is reduced.
 - Keep the source photographs unchanged.
-- Keep Bar transparent with a 3px rose `#f092dc` outline, matching the hero
-  photo border. Use no filled duplicate or text shadow so the background and
-  photography remain visible through the lettering. Preserve its size,
+- Keep Bar transparent with a rose `#f092dc` outline: 3px on desktop, 2px on
+  tablet and 1.5px on mobile. Use no filled duplicate or text shadow so the
+  background and photography remain visible through the lettering. Preserve its size,
   placement and rotation on desktop, tablet and mobile; use solid CanvasText
   in forced-colour mode for readability.

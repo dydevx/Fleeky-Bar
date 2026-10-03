@@ -494,7 +494,7 @@ body.lookbook-open, body.menu-open { overflow: hidden; }
   .hero-echo { top: 8px; left: 9px; }
   .hero-detail { display: none; }
   .hero-visual { top: 242px; left: 24%; width: 54%; height: 435px; }
-  .hero-bar { top: 360px; right: 1%; font-size: 1.08em; }
+  .hero-bar { top: 360px; right: 1%; font-size: 1.08em; -webkit-text-stroke-width: 2px; }
   .hero-mantra { top: 357px; right: 0; font-size: 1.7rem; }
   .hero-chrome { left: -9%; top: 347px; width: 43%; height: 320px; }
   .hero-glints { left: 0; top: 375px; width: 28%; height: 205px; }
@@ -511,7 +511,7 @@ body.lookbook-open, body.menu-open { overflow: hidden; }
   .hero-echo { top: 6px; left: 7px; }
   .hero-visual { top: 230px; left: 18%; width: 70%; height: 355px; }
   .hero-frame { border-width: 4px; }
-  .hero-bar { top: 345px; font-size: 1.2em; }
+  .hero-bar { top: 345px; font-size: 1.2em; -webkit-text-stroke-width: 1.5px; }
   .hero-mantra { top: 330px; font-size: 1.35rem; }
   .hero-chrome { left: -15%; top: 350px; width: 53%; height: 280px; }
   .hero-index { top: 278px; }
