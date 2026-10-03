@@ -89,7 +89,7 @@
     const rotation = base === 'none' ? '' : base;
     animate(line, [
       { clipPath: 'inset(0 100% 0 0)', transform: `translateX(${index ? 70 : -90}px) skewX(-9deg) ${rotation}` },
-      { clipPath: 'inset(0 0 0 0)', transform: rotation || 'none' }
+      { clipPath: 'inset(-12% -12% -18% -12%)', transform: rotation || 'none' }
     ], { duration: 1100, delay: index * 180 });
   });
   animate(document.querySelector('.hero-photo'), [
@@ -101,16 +101,62 @@
     { clipPath: 'inset(0 0 0 0)', transform: 'scale(1)' }
   ], { duration: 950, delay: 300 });
 
+  // A cut-and-paste poster: separate the print layers, then register them again.
+  const heroFrame = document.querySelector('.hero-frame');
+  const echoes = [...document.querySelectorAll('.hero-echo, .hero-bar-echo')];
+  const glints = [...document.querySelectorAll('.hero-glint')];
+  let lastPosterKick = -Infinity;
+  const kickPoster = (delay = 0) => {
+    if (motionQuery.matches || document.hidden || performance.now() - lastPosterKick < 1600) return;
+    lastPosterKick = performance.now();
+    echoes.forEach((echo, index) => animate(echo, [
+      { transform: 'translate(0, 0)' },
+      { transform: `translate(${index ? -9 : 12}px, 5px)`, offset: .28 },
+      { transform: `translate(${index ? 4 : -5}px, -2px)`, offset: .55 },
+      { transform: 'translate(0, 0)' }
+    ], { duration: 620, delay: delay + index * 70 }));
+    glints.forEach((glint, index) => animate(glint, [
+      { transform: 'rotate(-55deg) scale(.5)', opacity: .3 },
+      { transform: 'rotate(15deg) scale(1.2)', opacity: 1, offset: .55 },
+      { transform: 'rotate(0) scale(1)', opacity: 1 }
+    ], { duration: 720, delay: delay + index * 90 }));
+    if (!delay) heroFrame.classList.add('is-sweeping');
+  };
+  kickPoster(850);
+  heroFrame.addEventListener('pointerenter', (event) => {
+    if (event.pointerType !== 'touch' && finePointer.matches) kickPoster();
+  });
+  heroFrame.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'touch') kickPoster();
+  }, { passive: true });
+  heroFrame.addEventListener('animationend', (event) => {
+    if (event.animationName === 'chrome-sweep') heroFrame.classList.remove('is-sweeping');
+  });
+  animate(document.querySelector('.hero-mantra'), [
+    { transform: 'translate(35px, -22px) rotate(19deg) scale(1.12)', opacity: .35 },
+    { transform: 'translate(0, 0) rotate(6deg) scale(.98)', opacity: 1, offset: .7 },
+    { transform: 'rotate(8deg) scale(1)', opacity: 1 }
+  ], { duration: 680, delay: 650 });
+
   const entranceObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       const target = entry.target;
+      if (target.classList.contains('look')) {
+        const rotation = getComputedStyle(target).transform;
+        const direction = target.matches('.look-two, .look-four') ? 1 : -1;
+        animate(target, [
+          { transform: `translate(${direction * 35}px, 28px) rotate(${direction * 7}deg) scale(.94) ${rotation}`, opacity: .55 },
+          { transform: rotation, opacity: 1 }
+        ], { duration: 800 });
+      }
       if (target.classList.contains('look') || target.matches('.nail-art-image, .manifesto-art, .social-visual')) {
         animate(target.querySelector('img'), [
           { clipPath: 'inset(0 0 100% 0)', transform: 'scale(1.1)' },
           { clipPath: 'inset(0 0 0 0)', transform: 'scale(1)' }
         ], { duration: 950 });
       } else if (target.matches('.manifesto h2, .nail-art h2')) {
+        target.classList.add('is-underlined');
         [...target.children].filter((word) => word.tagName !== 'BR').forEach((word, index) => animate(word, [
           { transform: `translateX(${index % 2 ? 65 : -65}px)`, opacity: 0.3 },
           { transform: 'translateX(0)', opacity: 1 }
@@ -126,6 +172,16 @@
   }, { threshold: 0.2 });
   document.querySelectorAll('.look, .nail-art-image, .manifesto-art, .social-visual, .manifesto h2, .nail-art h2, .final-cta h2').forEach((el) => entranceObserver.observe(el));
 
+  const stamp = document.querySelector('.nail-art-stamp');
+  const stampObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(({ target, isIntersecting }) => {
+      if (!isIntersecting) return;
+      if (!motionQuery.matches) target.classList.add('is-stamped');
+      observer.unobserve(target);
+    });
+  }, { threshold: .7 });
+  stampObserver.observe(stamp);
+
   const bands = [...document.querySelectorAll('.attitude-band')];
   const pausedBands = new Set();
   const updateMotion = () => {
@@ -137,7 +193,11 @@
       toggle.textContent = paused ? 'Animatie afspelen' : 'Animatie pauzeren';
       toggle.setAttribute('aria-pressed', String(paused));
     });
-    if (motionQuery.matches) activeAnimations.forEach((animation) => animation.cancel());
+    if (motionQuery.matches) {
+      activeAnimations.forEach((animation) => animation.cancel());
+      heroFrame.classList.remove('is-sweeping');
+      stamp.classList.remove('is-stamped');
+    }
     document.querySelectorAll('.look-open, .hero-frame').forEach((el) => {
       el.style.removeProperty('--tilt-x');
       el.style.removeProperty('--tilt-y');
@@ -158,6 +218,10 @@
   });
   document.addEventListener('visibilitychange', () => {
     bands.forEach((band) => band.classList.toggle('is-background', document.hidden));
+    if (document.hidden) {
+      activeAnimations.forEach((animation) => animation.cancel());
+      heroFrame.classList.remove('is-sweeping');
+    }
   });
 
   // Supplemental ring: keep the native cursor, disable all tracking on touch/reduced motion.

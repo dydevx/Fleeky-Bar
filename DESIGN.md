@@ -40,6 +40,21 @@ Purposeful overlap is welcome; booking and business information stay clear.
 - No scroll hijacking, continuous JS animation loop or motion library.
 - Reduced motion disables entrances, parallax, cursor, tilt and marquee motion.
 
+### Rebellious motion details
+
+- The hero is a cut-and-paste poster assembly: the Fleeky/Bar shadow layers
+  briefly separate and register again, the caption lands like a pasted sticker,
+  and three small chrome glints turn once. The photo repeats the layer/glint
+  accent on mouse entry or touch, with a 1.6-second cooldown.
+- Gallery prints slide into their existing opposing rotations once on entry.
+  Chrome sheen crosses a print on hover or keyboard focus. Campaign words get
+  a drawn underline; the existing nail-art stamp lands once when scrolled into view.
+- Link arrows cut forward on hover/focus, and the footer wordmark briefly gets
+  a displaced print shadow. All accents are finite and use native CSS/WAAPI.
+- Keep natural photo colours, content visibility, existing booking interactions,
+  keyboard access and reduced-motion support. Cancel finite JS motion when the
+  tab is hidden. Add no continuous render loop or animation dependency.
+
 ## Invariants
 
 Preserve prices, service descriptions, hours, address, phone, both social URLs,
